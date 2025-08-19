@@ -1,0 +1,5 @@
+.advanced-blog-list { border:1px solid #ddd; padding:12px; border-radius:6px; }
+.abl-controls { display:flex; gap:8px; margin-bottom:10px; }
+.abl-items { list-style:none; padding:0; display:grid; gap:10px; }
+.abl-items li { padding:10px; border:1px solid #eee; border-radius:4px; }
+.abl-pagination { display:flex; gap:8px; justify-content:flex-end; margin-top:10px; }

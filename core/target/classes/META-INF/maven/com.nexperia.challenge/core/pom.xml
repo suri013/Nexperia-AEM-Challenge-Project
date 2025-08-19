@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.nexperia.challenge</groupId>
+    <artifactId>nexperia-code-challenge</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>core</artifactId>
+  <packaging>jar</packaging>
+  <name>Nexperia AEM Challenge - Core</name>
+
+  <dependencies>
+    <!-- Sling APIs -->
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.api</artifactId>
+      <version>2.27.12</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.servlets.api</artifactId>
+      <version>2.6.0</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Sling Models -->
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.models.api</artifactId>
+      <version>${sling.models.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.sling</groupId>
+      <artifactId>org.apache.sling.models.impl</artifactId>
+      <version>${sling.models.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- OSGi annotations -->
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.service.component.annotations</artifactId>
+      <version>1.5.1</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.annotation.versioning</artifactId>
+      <version>1.1.0</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>osgi.cmpn</artifactId>
+      <version>7.0.0</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- JSON -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.17.1</version>
+    </dependency>
+
+    <!-- (Optional) Core Components API (provided by AEM runtime) -->
+    <dependency>
+      <groupId>com.adobe.cq</groupId>
+      <artifactId>core.wcm.components.core</artifactId>
+      <version>${aem.core.wcm.components.version}</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- JUnit (optional) -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>5.10.2</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <!-- BND for OSGi manifest -->
+      <plugin>
+        <groupId>biz.aQute.bnd</groupId>
+        <artifactId>bnd-maven-plugin</artifactId>
+        <version>6.4.0</version>
+        <executions>
+          <execution>
+            <goals><goal>bnd-process</goal></goals>
+          </execution>
+        </executions>
+        <configuration>
+          <bnd><![CDATA[
+            Bundle-Name: Nexperia Challenge Core
+            Bundle-SymbolicName: com.nexperia.challenge.core
+            Export-Package: com.nexperia.challenge.core.*
+            Import-Package: *
+          ]]></bnd>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

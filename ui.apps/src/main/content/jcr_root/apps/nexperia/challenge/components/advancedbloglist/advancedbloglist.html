@@ -1,0 +1,23 @@
+<sly data-sly-use.model="com.nexperia.challenge.core.models.blog.AdvancedBlogListModel" />
+<div class="advanced-blog-list" data-api="${model.api}" data-size="${model.pageSize}">
+  <div class="abl-controls">
+    <input type="search" placeholder="${model.searchPlaceholder}" class="abl-search"/>
+    <select class="abl-sort">
+      <option value="">Sort</option>
+      <option value="title">Title</option>
+      <option value="author">Author</option>
+      <option value="category">Category</option>
+    </select>
+  </div>
+  <ul class="abl-items" data-sly-list.post="${model.initialPosts}">
+    <li>
+      <h4>${post.title}</h4>
+      <p>${post.body}</p>
+    </li>
+  </ul>
+  <div class="abl-pagination">
+    <button class="prev">Prev</button>
+    <button class="next">Next</button>
+  </div>
+</div>
+<sly data-sly-call="${clientlib.all @ categories='nexperia.advancedbloglist'}"/>
