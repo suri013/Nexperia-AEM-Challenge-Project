@@ -1,40 +1,37 @@
 # Nexperia AEM Challenge Project
 
-This project is a part of the **Nexperia AEM Challenge**, developed using **Java, Maven, AEM SDK, OSGi framework, and Sling Models**.  
+This project is a solution for the **Nexperia AEM Coding Challenge**.  
+It is built using **Java**, **Maven**, and follows the structure for an **AEM project** with core and UI components.  
+
+---
 
 ## 📂 Project Structure
-nexperia-aem-challenge/
-├── core/ # Core backend code
-│ ├── blog/ # Blog service and implementation
-│ ├── models/ # Sling models
-│ └── servlets/ # AEM Servlets
-├── ui.apps/ # Frontend components
-├── ui.content/ # Content structure
-├── all/ # Dispatcher, config
-└── pom.xml # Maven parent build file
+Nexperia_AEM_Challenge_Final/
+├── core/ # Core Java code (services, models, servlets)
+├── ui.apps/ # AEM components and clientlibs
+├── ui.content/ # Content package for testing in AEM
+├── pom.xml # Parent Maven configuration
+└── README.md # Project documentation
 
+yaml
+Copy
+Edit
 
-## 🚀 Features
-- Blog Service with implementation  
-- Sling Models for AEM components  
-- OSGi configurations  
-- Servlets for custom backend logic  
-- Maven multi-module project structure  
+---
 
-## 🛠️ Requirements
-- Java 11+  
-- Maven 3.8+  
-- AEM SDK running instance  
-- Git  
+## 🚀 How to Build & Run
 
-## ▶️ Setup & Run
+### Prerequisites
+- Java 11 or later  
+- Apache Maven 3.6+  
+- Adobe AEM SDK installed and running  
+
+### Build Project
 ```bash
-# Clone the repository
-git clone https://github.com/suri013/Nexperia-AEM-Challenge-Project.git
-cd Nexperia-AEM-Challenge-Project
-
-# Build with Maven
 mvn clean install
-
-# Deploy to AEM
-mvn -PautoInstallPackage clean install
+Deploy to AEM
+bash
+Copy
+Edit
+mvn clean install -PautoInstallPackage
+This will install the packages into your running AEM instance (usually at http://localhost:4502).
