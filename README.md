@@ -35,3 +35,18 @@ Copy
 Edit
 mvn clean install -PautoInstallPackage
 This will install the packages into your running AEM instance (usually at http://localhost:4502).
+
+✨ Features
+Core services and models written in Java
+
+AEM components structured in ui.apps
+
+Sample content in ui.content
+
+Maven multi-module project structure
+
+Ready for deployment on AEM 6.5 / AEMaaCS
+
+📌 Submission
+This repository contains the full project required for the challenge.
+Simply clone the repo and build using Maven.
