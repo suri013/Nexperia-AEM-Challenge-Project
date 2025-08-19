@@ -42,3 +42,8 @@ This will install the generated packages into your running AEM instance
 ✅ Maven multi-module project structure
 
 ✅ Compatible with AEM 6.5 / AEMaaCS
+
+📌 Submission
+
+This repository contains the complete solution for the challenge.
+Simply clone the repo and build using Maven to deploy it on AEM.
