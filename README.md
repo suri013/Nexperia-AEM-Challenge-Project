@@ -1,52 +1,44 @@
-# Nexperia AEM Challenge Project
+🚀 Nexperia AEM Challenge Project
 
-This project is a solution for the **Nexperia AEM Coding Challenge**.  
-It is built using **Java**, **Maven**, and follows the structure for an **AEM project** with core and UI components.  
+This repository contains the solution for the Nexperia AEM Coding Challenge.
+It is built using Java, Maven, and follows the Adobe Experience Manager (AEM) project structure with core and UI modules.
 
----
-
-## 📂 Project Structure
+📂 Project Structure
 Nexperia_AEM_Challenge_Final/
-├── core/ # Core Java code (services, models, servlets)
-├── ui.apps/ # AEM components and clientlibs
-├── ui.content/ # Content package for testing in AEM
-├── pom.xml # Parent Maven configuration
-└── README.md # Project documentation
+├── core/         # Core Java code (services, models, servlets)
+├── ui.apps/      # AEM components and client libraries
+├── ui.content/   # Content package for testing in AEM
+├── pom.xml       # Parent Maven configuration
+└── README.md     # Project documentation
 
-yaml
-Copy
-Edit
+⚙️ Prerequisites
 
----
+Java 11 or later
 
-## 🚀 How to Build & Run
+Apache Maven 3.6+
 
-### Prerequisites
-- Java 11 or later  
-- Apache Maven 3.6+  
-- Adobe AEM SDK installed and running  
+Adobe AEM SDK installed and running (AEM 6.5 or AEMaaCS)
 
-### Build Project
-```bash
+🔨 Build & Deploy
+Build Project
 mvn clean install
+
 Deploy to AEM
-bash
-Copy
-Edit
 mvn clean install -PautoInstallPackage
-This will install the packages into your running AEM instance (usually at http://localhost:4502).
+
+
+This will install the generated packages into your running AEM instance
+(default: http://localhost:4502
+).
 
 ✨ Features
-Core services and models written in Java
 
-AEM components structured in ui.apps
+✅ Core services and models written in Java
 
-Sample content in ui.content
+✅ AEM components structured in ui.apps
 
-Maven multi-module project structure
+✅ Sample content included in ui.content
 
-Ready for deployment on AEM 6.5 / AEMaaCS
+✅ Maven multi-module project structure
 
-📌 Submission
-This repository contains the full project required for the challenge.
-Simply clone the repo and build using Maven.
+✅ Compatible with AEM 6.5 / AEMaaCS
