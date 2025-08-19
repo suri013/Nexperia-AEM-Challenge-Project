@@ -1,28 +1,40 @@
-# Nexperia AEM Challenge (GitHub-ready)
+# Nexperia AEM Challenge Project
 
-Implements **AdvancedBlogList** with:
-- **Component**: `/apps/nexperia/challenge/components/advancedbloglist`
-- **ClientLib**: `nexperia.advancedbloglist`
-- **Servlet**: `GET /bin/nexperia/blogposts` (params: `page`, `size`, `sort`, `q`)
-- **Sling Model**: `AdvancedBlogListModel`
-- **OSGi Service**: `BlogServiceImpl` (external API + in-memory TTL cache, configurable)
-- **Config**: `/apps/nexperia/osgiconfig/*.cfg.json`
+This project is a part of the **Nexperia AEM Challenge**, developed using **Java, Maven, AEM SDK, OSGi framework, and Sling Models**.  
 
-## Build
-Requires AEM SDK at `http://localhost:4502` for full install. For compile only:
+## 📂 Project Structure
+nexperia-aem-challenge/
+├── core/ # Core backend code
+│ ├── blog/ # Blog service and implementation
+│ ├── models/ # Sling models
+│ └── servlets/ # AEM Servlets
+├── ui.apps/ # Frontend components
+├── ui.content/ # Content structure
+├── all/ # Dispatcher, config
+└── pom.xml # Maven parent build file
+
+
+## 🚀 Features
+- Blog Service with implementation  
+- Sling Models for AEM components  
+- OSGi configurations  
+- Servlets for custom backend logic  
+- Maven multi-module project structure  
+
+## 🛠️ Requirements
+- Java 11+  
+- Maven 3.8+  
+- AEM SDK running instance  
+- Git  
+
+## ▶️ Setup & Run
 ```bash
+# Clone the repository
+git clone https://github.com/suri013/Nexperia-AEM-Challenge-Project.git
+cd Nexperia-AEM-Challenge-Project
+
+# Build with Maven
 mvn clean install
-```
-For full install (if AEM SDK available):
-```bash
-mvn -PautoInstallSinglePackage clean install
-```
 
-## Mapping to requirements
-- Pagination, sorting, search via servlet + JS.
-- Related posts method available in service.
-- Accessible markup + responsive CSS scaffold.
-- Sling Models, OSGi configs, server-side error handling, JUnit-ready.
-
-## Submit
-Push this project to GitHub as `nexperia-code-challenge` and send the link.
+# Deploy to AEM
+mvn -PautoInstallPackage clean install
